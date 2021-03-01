@@ -16,7 +16,7 @@ public interface PerfumeDao {
     @Query("Select * from Perfume")
     LiveData<List<Perfume>> getAllService();
     @Query("Select * from Perfume where PerfumeID=:id")
-    Perfume findById(int id);
+    LiveData<Perfume> findById(int id);
 
     @Insert(onConflict= OnConflictStrategy.REPLACE)
     void insert(Perfume perfume);

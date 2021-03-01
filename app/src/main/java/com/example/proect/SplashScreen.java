@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.proect.presentation.activities.main.MainActivity;
+
 public class SplashScreen extends AppCompatActivity {
 
     @Override
@@ -13,9 +15,9 @@ public class SplashScreen extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
 
         try {
-            Thread.sleep(4000);//Приостанавливает поток на 1 секунду
+            Thread.sleep(5000);//Приостанавливает поток на 1 секунду
             Intent i;
-            i = new Intent(SplashScreen.this,MainActivity.class );
+            i = new Intent(SplashScreen.this, MainActivity.class );
             startActivity(i);
         }catch (Exception e){
 
