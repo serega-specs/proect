@@ -1,8 +1,9 @@
 apply plugin: 'com.android.application'
 
 android {
-    viewBinding {
-        enabled = true
+
+    buildFeatures {
+        viewBinding true
     }
 
     compileSdkVersion 30

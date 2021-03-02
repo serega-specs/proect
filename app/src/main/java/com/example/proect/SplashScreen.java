@@ -15,7 +15,7 @@ public class SplashScreen extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
 
         try {
-            Thread.sleep(5000);//Приостанавливает поток на 1 секунду
+            Thread.sleep(1000);//Приостанавливает поток на 1 секунду
             Intent i;
             i = new Intent(SplashScreen.this, MainActivity.class );
             startActivity(i);

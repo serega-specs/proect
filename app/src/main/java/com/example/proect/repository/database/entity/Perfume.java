@@ -17,7 +17,8 @@ public class Perfume {
 
     public String getPrice()
     {
-        return String.valueOf(price);
+        DecimalFormat decimalFormat = new DecimalFormat("0.00 Р");
+        return decimalFormat.format(price);
     }
 
 

@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.proect.AddPerfumeActivity;
 import com.example.proect.PosledneeActivity;
 import com.example.proect.databinding.ActivityMainBinding;
 import com.example.proect.databinding.ItemParBinding;
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         adapter = new PerfumeAdapter();
         perfumeList = new ArrayList<>();
         binding.recyclerView.setAdapter(adapter);
-        data=AppData.getGetInstance(this);
+        data=AppData.getGetInstance(getApplicationContext());
         data.db.perfumeDao().getAllService().observe(this, new Observer<List<Perfume>>() {
             @Override
             public void onChanged(List<Perfume> perfumes) {
@@ -96,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     public void AddPerfume(View view) {
-        
+        Intent intent = new Intent(MainActivity.this, AddPerfumeActivity.class);
+        startActivity(intent);
     }
 }
